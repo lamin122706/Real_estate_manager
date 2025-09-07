@@ -1,7 +1,7 @@
 name: Flutter CI
 
 on:
-  workflow_dispatch:   # run manually
+  workflow_dispatch: # run manually
   push:
     branches: [ "main" ]
 
@@ -25,7 +25,7 @@ jobs:
         run: flutter build apk --release
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
